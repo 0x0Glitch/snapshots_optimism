@@ -1,0 +1,18 @@
+CREATE TABLE IF NOT EXISTS user_balances_optimism (
+    user_addr   BYTEA       NOT NULL,
+    update_time TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    "DAI" NUMERIC[] DEFAULT '{}'::NUMERIC[],
+    "USDC" NUMERIC[] DEFAULT '{}'::NUMERIC[],
+    "WETH" NUMERIC[] DEFAULT '{}'::NUMERIC[],
+    "cbETH" NUMERIC[] DEFAULT '{}'::NUMERIC[],
+    "wstETH" NUMERIC[] DEFAULT '{}'::NUMERIC[],
+    "rETH" NUMERIC[] DEFAULT '{}'::NUMERIC[],
+    "weETH" NUMERIC[] DEFAULT '{}'::NUMERIC[],
+    "wrsETH" NUMERIC[] DEFAULT '{}'::NUMERIC[],
+    "WBTC" NUMERIC[] DEFAULT '{}'::NUMERIC[],
+    "USDT" NUMERIC[] DEFAULT '{}'::NUMERIC[],
+    "OP" NUMERIC[] DEFAULT '{}'::NUMERIC[],
+    "VELO" NUMERIC[] DEFAULT '{}'::NUMERIC[],
+    "USDT0" NUMERIC[] DEFAULT '{}'::NUMERIC[],
+    PRIMARY KEY (user_addr)
+);
